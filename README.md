@@ -1,1 +1,1 @@
-# Cypress---CoffeeCart
+# Cypress-CoffeeCart
