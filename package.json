@@ -8,13 +8,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "cypress-cucumber-preprocessor":{
-        "nonGlobalStepDefinitions": false,
-        "stepDefinitions": "cypress/support/step-definitions/"
-      },
-      
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/step-definitions/"
+  },
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
     "cypress": "^15.9.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   }
