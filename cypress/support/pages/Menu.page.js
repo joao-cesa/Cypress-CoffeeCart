@@ -22,11 +22,24 @@ const LISTA_DE_CAFES = [
 
 const CAFES_ESCOLHIDOS = Cypress._.sampleSize(LISTA_DE_CAFES, 3);
 
+const ACEITAR_PROMO = '//button[@class="yes"]'
+
+const BOTÃO_CART = '//a[@href="/cart"]'
+
 class MenuDeEscolhas{
     escolherCafes(){
         CAFES_ESCOLHIDOS.forEach((CAFE) => {
         cy.xpath(CAFE).click()
         }) 
     }
+    AceitarPromocao(){
+        cy.xpath(ACEITAR_PROMO).click()
+    }
+    AcessarCart(){
+        cy.xpath(BOTÃO_CART).click()
+    }
+
 }
+
+
 export default new MenuDeEscolhas

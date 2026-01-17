@@ -1,16 +1,32 @@
-import { Given, When, And, Then, Before, After } from 'cypress-cucumber-preprocessor/steps'
-import enterCartPage from '../pages/enterCart.page'
-import menuPage from '../pages/menu.page'
-import PromoPage from '../pages/Promo.page'
+import { Given, When, Then} from "@badeball/cypress-cucumber-preprocessor"
+import MenuDeEscolhas from '../pages/menu.page'
+import Cart from '../pages/cart.page'
+import PaymentDetails from '../pages/PaymentDetails.page'
 
-And('adiciona três cafés diferentes ao carrinho', () =>{
-    menuPage.escolherCafes()
+When('adiciona três cafés diferentes ao carrinho', () =>{
+    MenuDeEscolhas.escolherCafes()
 })
 
-And('aceitar a promoção do mocha', () =>{
-    PromoPage.clicarYes()
+When('aceitar a promoção do mocha', () =>{
+    MenuDeEscolhas.AceitarPromocao()
 })
 
-And('acessa a página do carrinho para validação', () =>{
-    enterCartPage.clicarCart()
+When('acessa a página do carrinho', () =>{
+    MenuDeEscolhas.AcessarCart()
+})
+
+When('deleta e valida os itens no carrinho', () =>{
+    Cart.deletarItem()
+})
+
+When('prossegue para a interface de pagamento', () =>{
+    Cart.clicarChekout()
+})
+
+Then('preenche os detalhes do pagamento', () =>{
+    PaymentDetails.preencherFormulario()
+})
+
+When('confirma a compra', () =>{
+    PaymentDetails.clicarSubmit()
 })
