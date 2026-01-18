@@ -62,7 +62,7 @@ Tem algumas maneiras de rodar o teste.
 ## 📂 Organização e Padrões
 
 **Idioma e Nomenclatura:**
-O projeto foi desenvolvido priorizando o **Português (PT-BR)** na escrita dos cenários (Gherkin) e na nomenclatura de arquivos/variáveis, visando clareza e facilidade de manutenção por times brasileiros. Termos em inglês foram mantidos apenas onde exigido pela sintaxe da linguagem ou ferramentas.
+O projeto foi desenvolvido priorizando o **Português (PT-BR)** na escrita dos cenários (Gherkin) e na nomenclatura de arquivos/variáveis, visando clareza. Termos em inglês foram mantidos apenas onde exigido pela sintaxe da linguagem ou ferramentas.
 
 **Estrutura:**
 O código segue o padrão **Page Object Model (POM)** para separar a lógica de interação da lógica de negócio.
