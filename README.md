@@ -23,7 +23,7 @@ O robô executa os seguintes passos lógicos:
 
 * **Linguagem:** JavaScript (Node.js v24)
 * **Framework:** Cypress
-* **BDD:** Cucumber (Gherkin)
+* **BDD:** Cucumber (Gherkin)via `@badeball/cypress-cucumber-preprocessor`
 * **Bibliotecas Auxiliares:**
     * `Faker.js` (Massa de dados)
     * `cypress-real-events` (Simulação de eventos nativos)
