@@ -48,7 +48,7 @@ class Cardapio {
                     });
                 });
             });
-            cy.get(item).click({ force: true }); 
+            cy.get(item).should('be.visible').realHover().realClick().wait(300);
         });
         cy.wrap(listaValidacao).as('listaEsperada');
     }
