@@ -43,18 +43,22 @@ O robô executa os seguintes passos lógicos:
     npm install
     ```
 
-### Executando o Teste
-
-1.  Abra a interface do Cypress:
+## Executando o Teste
+Tem algumas maneiras de rodar o teste.
+### Navegador (Recomendado)
+1.  Abra o terminal e digite:
     ```bash
     npx cypress open
     ```
 2.  Selecione a opção **"E2E Testing"**.
 3.  Escolha o navegador de sua preferência (Chrome,Electron,Edge...).
 4.  Na lista de testes (Specs), clique em **`CoffeeCart.feature`**.
-
 ---
-
+### Terminal 
+1. Abra o terminal e digite:
+    ```bash
+    npx cypress run
+    ```
 ## 📂 Organização e Padrões
 
 **Idioma e Nomenclatura:**
