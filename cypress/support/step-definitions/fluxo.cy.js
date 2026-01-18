@@ -13,11 +13,11 @@ When('que adiciona três cafés diferentes ao carrinho', () =>{
 })
 
 When('que aceita a promoção do mocha', () =>{
-    Cardapio.AceitarPromocao()
+    Cardapio.aceitarPromocao()
 })
 
 When('entao acessa a pagina do carrinho', () =>{
-    Cardapio.AcessarCart()
+    Cardapio.acessarCart()
 })
 
 When('que deleta um item do carrinho', () =>{

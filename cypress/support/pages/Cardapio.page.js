@@ -48,12 +48,12 @@ class Cardapio {
                     });
                 });
             });
-            cy.get(item).should('be.visible').realHover().realClick().wait(300);
+            cy.get(item).should('be.visible').realHover().realClick();
         });
         cy.wrap(listaValidacao).as('listaEsperada');
     }
 
-    AceitarPromocao() {
+    aceitarPromocao() {
         cy.get(validarModel).should('be.visible');
         cy.get(aceitarPromo).should('be.visible').click();
         listaValidacao.push({
@@ -63,7 +63,7 @@ class Cardapio {
         cy.wrap(listaValidacao).as('listaEsperada');
     }
 
-    AcessarCart() {
+    acessarCart() {
         cy.get(botaoCart).should('be.visible').click();
     }
 }

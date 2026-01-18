@@ -17,9 +17,9 @@ class Pagamento {
         const checkbox = faker.datatype.boolean();
 
         if(checkbox){
-            cy.get(checkboxMensagem).should('be.visible').check({ force: true })
+            cy.get(checkboxMensagem).should('be.visible').check()
         }else{
-            cy.get(checkboxMensagem).should('be.visible').uncheck({ force: true })
+            cy.get(checkboxMensagem).should('be.visible').uncheck()
         }
     }
 
