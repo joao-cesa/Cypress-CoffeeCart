@@ -11,6 +11,7 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.feature',
     baseUrl: "https://coffee-cart.app/",
     
+    trashAssetsBeforeRuns: true,
    
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);

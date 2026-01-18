@@ -1,32 +1,45 @@
-import { Given, When, Then} from "@badeball/cypress-cucumber-preprocessor"
-import MenuDeEscolhas from '../pages/menu.page'
-import Cart from '../pages/cart.page'
-import PaymentDetails from '../pages/PaymentDetails.page'
+import { Given, When, Then, After} from "@badeball/cypress-cucumber-preprocessor"
+import Cardapio from '../pages/Cardapio.page'
+import Carrinho from '../pages/Carrinho.page'
+import Pagamento from '../pages/Pagamento.page'
 
-When('adiciona três cafés diferentes ao carrinho', () =>{
-    MenuDeEscolhas.escolherCafes()
+
+Given('que o usuario acessa o portal CoffeeCart', () =>{
+    cy.visit('/')
+});
+ 
+When('que adiciona três cafés diferentes ao carrinho', () =>{
+    Cardapio.escolherCafes()
 })
 
-When('aceitar a promoção do mocha', () =>{
-    MenuDeEscolhas.AceitarPromocao()
+When('que aceita a promoção do mocha', () =>{
+    Cardapio.AceitarPromocao()
 })
 
-When('acessa a página do carrinho', () =>{
-    MenuDeEscolhas.AcessarCart()
+When('entao acessa a pagina do carrinho', () =>{
+    Cardapio.AcessarCart()
 })
 
-When('deleta e valida os itens no carrinho', () =>{
-    Cart.deletarItem()
+When('que deleta um item do carrinho', () =>{
+    Carrinho.validar_E_Deletar()
 })
 
-When('prossegue para a interface de pagamento', () =>{
-    Cart.clicarChekout()
+When('entao prossegue para a interface de pagamento', () =>{
+    Carrinho.clicarChekout()
 })
 
-Then('preenche os detalhes do pagamento', () =>{
-    PaymentDetails.preencherFormulario()
+When('o usuario preencher os detalhes do pagamento', () =>{
+    Pagamento.preencherFormulario()
 })
 
-When('confirma a compra', () =>{
-    PaymentDetails.clicarSubmit()
+When('o usuario confirmar a compra', () =>{
+    Pagamento.clicarSubmit()
+})
+
+Then('uma mensagem de confirmação é exibida na tela', () =>{
+    Pagamento.validarSucesso()
+})
+
+After(() => {
+    cy.screenshot('e2e-sucesso-coffeeCart', { overwrite: true })
 })
