@@ -13,5 +13,5 @@ JS, Cucumber, Node.js, Cypress, Xpath, Faker.js
 - Rode "npm install";
 - Rode "npx cypress open";
 
-5 - Organização do projeto - 
-Seguindo a orientação recebida em aula sobre a boa prática de manter um idioma principal e uma linguagem clara, priorizei o uso do Português (PT-BR) em todo o desenvolvimento da automação. Evitei o uso de gírias e de termos em inglês sempre que não fossem obrigatórios pela sintaxe da ferramenta ou da API, aplicando essa padronização tanto na nomenclatura de variáveis quanto nos nomes dos arquivos. O objetivo foi garantir que o código seja legível e siga um padrão técnico e organizado.
+### Organização do projeto - 
+mantive um idioma principal e uma linguagem clara, priorizei o uso do Português (PT-BR) em todo o desenvolvimento da automação. Evitei o uso de gírias e de termos em inglês sempre que não fossem obrigatórios pela sintaxe da ferramenta ou da API, aplicando essa padronização tanto na nomenclatura de variáveis quanto nos nomes dos arquivos. O objetivo foi garantir que o código seja legível e organizado.
