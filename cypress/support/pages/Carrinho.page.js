@@ -22,8 +22,6 @@ class Carrinho {
                         cy.log(` [Index ${index}] Ignorado: "${nomeLimpo}" | "${precoLimpo}"`);
                         return;
                     }
-                    //cy.log(` Conferindo: [${nomeLimpo}] por [${precoLimpo}]`);
-
                     const itemMatch = listaEsperada.find(i => i.nome === nomeLimpo && i.preco === precoLimpo);
 
                     if (!itemMatch) {
